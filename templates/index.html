@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello Gann</h1>
+    <h1>Ini Adalah Halaman Index</h1>
+
+    {% if not search %}
+        <h2>ini Halaman Index Biasa</h2>
+    {% else %}
+        <h2>Ini adalah halaman {{search}}</h2>
+    {% endif %}
+
 </body>
 </html>
