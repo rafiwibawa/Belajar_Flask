@@ -6,6 +6,15 @@
     <title>Document</title>
 </head>
 <body>
+
+    {% with massages = get_flashed_messages() %}
+        {% if massages %}
+            {% for massage in massages %}
+                {{massage}}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <hr>
     <h1>Ini adalah halaman profile {{username}}</h1>
 
     <a href="{{ url_for('logout') }}">LogOut</a>
